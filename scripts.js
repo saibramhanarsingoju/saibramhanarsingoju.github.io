@@ -1,2 +1,9 @@
-// script.js
-console.log("Saibramha Narsingoju Portfolio Loaded");
+// Smooth scrolling for navigation links (if you add nav later)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
